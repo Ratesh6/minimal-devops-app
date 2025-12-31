@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  app:
+    image: minimal-devops-app:local
+    container_name: minimal-app-compose
+    environment:
+      - APP_PORT=5000
+    ports:
+      - "8080:5000"
