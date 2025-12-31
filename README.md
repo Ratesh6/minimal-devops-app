@@ -88,7 +88,8 @@ docker build -t minimal-devops-app:latest .
 docker run -d -p 5000:5000 --name minimal-devops-app minimal-devops-app:latest
 http://localhost:5000
 curl http://localhost:5000/health
-<img width="1873" height="946" alt="image" src="https://github.com/user-attachments/assets/a1c19cc7-4a73-4fe3-8505-3a6712ea7fdb" />
+
+
 
 
 
