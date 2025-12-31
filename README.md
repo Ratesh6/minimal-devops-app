@@ -70,3 +70,23 @@ docker build -t minimal-devops-app:latest .
 docker run -d -p 5000:5000 --name minimal-devops-app minimal-devops-app:latest
 http://localhost:5000
 curl http://localhost:5000/health
+#Archutectural diagram
+flowchart LR
+    User[User / Browser]
+
+    Host[Host Machine<br/>Port 8080]
+
+    Docker[Docker Engine]
+
+    Compose[Docker Compose]
+
+    Container[Application Container<br/>Port 5000]
+
+    App[Minimal DevOps App<br/>Flask<br/>APP_PORT=5000]
+
+    User -->|HTTP Request| Host
+    Host -->|Port Mapping 8080:5000| Docker
+    Docker --> Compose
+    Compose --> Container
+    Container --> App
+
